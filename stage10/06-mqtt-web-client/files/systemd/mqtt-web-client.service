@@ -1,0 +1,11 @@
+[Unit]
+Description=MQTT Web Client
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/hivemq-mqtt-web-client
+ExecStart=/usr/bin/python3 -m http.server 1888
+ExecStop=/bin/kill `/bin/ps aux | /bin/grep http.server | /bin/grep -v grep | /usr/bin/awk '{ print $2 }'`
+
+[Install]
+WantedBy=multi-user.target
