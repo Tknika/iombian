@@ -1,0 +1,7 @@
+'Dockerfile' file should not be symlinked until the following issue is resolved:
+
+https://github.com/RPi-Distro/pi-gen/issues/271
+
+The modified 'Dockerfile' file provided in this repository has been created thanks to @hhromic:
+
+https://github.com/RPi-Distro/pi-gen/pull/307
