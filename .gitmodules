@@ -1,6 +1,6 @@
 [submodule "pi-gen"]
 	path = pi-gen
 	url = https://github.com/RPi-Distro/pi-gen.git
-[submodule "stage10/99-confinit/config"]
-	path = stage10/99-confinit/config
+[submodule "stage9/99-confinit/config"]
+	path = stage9/99-confinit/config
 	url = git@github.com:Tknika/iombian-confinit.git
