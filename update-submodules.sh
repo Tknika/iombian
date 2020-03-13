@@ -5,7 +5,7 @@ git submodule init
 git submodule update
 
 echo "Pulling latest changes ..."
-git -C pi-gen pull
-git -C stage9/99-confinit/config pull
+git -C pi-gen pull origin master
+git -C stage9/99-confinit/config pull origin master
 
 echo "Done."
