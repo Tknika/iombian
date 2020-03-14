@@ -1,0 +1,16 @@
+name: IoMBian builder
+
+on: [push]
+
+jobs:
+    build:
+      strategy:
+        matrix:
+          platform: [ubuntu-latest]
+      runs-on: ${{ matrix.platform }}
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+        - name: Build IoMBian
+          run:
+            ./build-iombian.sh
