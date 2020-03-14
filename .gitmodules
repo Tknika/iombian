@@ -3,4 +3,4 @@
 	url = https://github.com/RPi-Distro/pi-gen.git
 [submodule "stage9/99-confinit/config"]
 	path = stage9/99-confinit/config
-	url = git@github.com:Tknika/iombian-confinit.git
+	url = https://github.com/Tknika/iombian-confinit.git
