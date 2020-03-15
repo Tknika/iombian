@@ -1,0 +1,24 @@
+name: IoMBian publisher
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Build IoMBian
+        run:
+          ./build-iombian.sh
+      - name: Publish the artifacts
+        uses: skx/github-action-publish-binaries@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: 'deploy/*.zip'
