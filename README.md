@@ -1,5 +1,7 @@
 # IoMBian
 
+![IoMBian builder](https://github.com/Tknika/iombian/workflows/IoMBian%20builder/badge.svg)
+
 ## Author
 
 (c) 2020 [Tknika](https://tknika.eus/) ([Aitor Iturrioz](https://github.com/bodiroga))
