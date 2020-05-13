@@ -31,6 +31,10 @@ npm i --unsafe-perm --save --no-progress bcryptjs
 EXTRANODES="node-red-node-pi-gpio node-red-node-random node-red-node-ping node-red-contrib-play-audio node-red-node-smooth node-red-node-serialport"
 npm i --unsafe-perm --save --no-progress $EXTRANODES
 
+# install Industry4.0 nodes
+INDUSTRYNODES="node-red-contrib-iiot-opcua"
+npm i --unsafe-perm --save --no-progress $INDUSTRYNODES
+
 popd
 mkdir -p "$NODERED_HOME/.npm"
 chown -Rf $NODERED_USER:$NODERED_GROUP $NODERED_HOME/.npm
