@@ -29,7 +29,7 @@ Wait a few minutes (< 5 minutes) until the process is over.
   - networking/wlan0/psk: *wifi_network_password*
 - Remove the microSD card from the computer and insert it into the Raspberry Pi.
 - Power up the Raspberry Pi with a suitable power supply (5V and 2.5A).
-- That's all! :tada:
+- Wait 5 minutes and... that's all! :tada:
 
 > To discover the services installed on the Raspberry Pi, see the section [IoMBian Discover](#iombian-discover).
 
