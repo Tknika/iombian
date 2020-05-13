@@ -35,9 +35,11 @@ npm i --unsafe-perm --save --no-progress $EXTRANODES
 INDUSTRYNODES="node-red-contrib-iiot-opcua"
 npm i --unsafe-perm --save --no-progress $INDUSTRYNODES
 
+# reset permissions
 popd
 mkdir -p "$NODERED_HOME/.npm"
 chown -Rf $NODERED_USER:$NODERED_GROUP $NODERED_HOME/.npm
+chown -Rf $NODERED_USER:$NODERED_GROUP $NODERED_HOME/.node-red/
 
 # start/stop/log scripts
 mkdir -p /usr/bin
