@@ -31,7 +31,9 @@ Wait a few minutes (< 5 minutes) until the process is over.
 - Power up the Raspberry Pi with a suitable power supply (5V and 2.5A).
 - Wait 5 minutes and... that's all! :tada:
 
-> To discover the services installed on the Raspberry Pi, see the section [IoMBian Discover](#iombian-discover).
+> **Note**: To discover the services installed on the Raspberry Pi, see the section [IoMBian Discover](#iombian-discover).
+
+> **Warning**: all IoMBian services are password protected by default, with ```iompi``` as the username and the password being the one defined in the ```parameters.yml``` file (```iompi``` also by default).
 
 
 ## Software
