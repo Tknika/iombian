@@ -4,3 +4,6 @@
 [submodule "stage9/99-confinit/config"]
 	path = stage9/99-confinit/config
 	url = https://github.com/Tknika/iombian-confinit.git
+[submodule "stage9/10-iombian-status-display/iombian-status-display"]
+	path = stage9/10-iombian-status-display/iombian-status-display
+	url = https://github.com/Tknika/iombian-status-display.git
