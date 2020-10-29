@@ -22,7 +22,7 @@ EOF
 
 install -m 644 -g root -o root iombian-status-display/requirements.txt ${ROOTFS_DIR}$INSTALLATION_PATH
 install -m 644 -g root -o root iombian-status-display/systemd/iombian-status-display.service ${ROOTFS_DIR}$INSTALLATION_PATH
-cp root iombian-status-display/src/* ${ROOTFS_DIR}$INSTALLATION_PATH
+cp -r iombian-status-display/src/* ${ROOTFS_DIR}$INSTALLATION_PATH
 
 # Create the virtual environment
 on_chroot << EOF
