@@ -21,7 +21,7 @@ mkdir -p $INSTALLATION_PATH
 EOF
 
 install -m 644 -g root -o root iombian-status-display/requirements.txt ${ROOTFS_DIR}$INSTALLATION_PATH
-install -m 644 -g root -o root iombian-status-display/systemd/iombian-status-display.service ${ROOTFS_DIR}$INSTALLATION_PATH
+install -m 644 -g root -o root iombian-status-display/systemd/iombian-status-display.service ${ROOTFS_DIR}/etc/systemd/system
 cp -r iombian-status-display/src/* ${ROOTFS_DIR}$INSTALLATION_PATH
 
 # Create the virtual environment
