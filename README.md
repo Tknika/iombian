@@ -12,7 +12,7 @@ The initial configuration of the operating system has been simplified to the max
 
 ## Installation
 
-The installation of the distribution is done in the same way as with any version of Raspbian.
+The installation of the distribution is done in the same way as with any version of Raspberry Pi OS.
 These are the recommended steps to follow:
 
 - Download Etcher from its [website](https://www.balena.io/etcher/).
@@ -38,7 +38,7 @@ Wait a few minutes (< 5 minutes) until the process is over.
 
 ## Software
 
-IoMBian is based on the latest stable version of [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/), to which the following programs have been added:
+IoMBian is based on the latest stable version of [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/), to which the following programs have been added:
 
 - [Node-RED](https://nodered.org/): a visual development tool, originally created by IBM, that allows to collect information from hardware devices, APIs and online services as part of the Internet of Things.
 - [Mosquitto](https://mosquitto.org/): a widespread MQTT server (broker) developed by the Eclipse Foundation.
