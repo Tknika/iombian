@@ -4,6 +4,24 @@
 [submodule "stage9/99-confinit/config"]
 	path = stage9/99-confinit/config
 	url = https://github.com/Tknika/iombian-confinit.git
-[submodule "stage9/10-iombian-status-display/iombian-status-display"]
-	path = stage9/10-iombian-status-display/iombian-status-display
-	url = https://github.com/Tknika/iombian-status-display.git
+[submodule "stage9/02-iombian-config-file-handler/iombian-config-file-handler"]
+	path = stage9/02-iombian-config-file-handler/iombian-config-file-handler
+	url = https://github.com/Tknika/iombian-config-file-handler.git
+[submodule "stage9/10-iombian-shutdown-handler/iombian-shutdown-handler"]
+	path = stage9/10-iombian-shutdown-handler/iombian-shutdown-handler
+	url = https://github.com/Tknika/iombian-shutdown-handler.git
+[submodule "stage9/11-iombian-button-handler/iombian-button-handler"]
+	path = stage9/11-iombian-button-handler/iombian-button-handler
+	url = https://github.com/Tknika/iombian-button-handler.git
+[submodule "stage9/12-iombian-system-info-provider/iombian-system-info-provider"]
+	path = stage9/12-iombian-system-info-provider/iombian-system-info-provider
+	url = https://github.com/Tknika/iombian-system-info-provider.git
+[submodule "stage9/13-iombian-display-handler/iombian-display-handler"]
+	path = stage9/13-iombian-display-handler/iombian-display-handler
+	url = https://github.com/Tknika/iombian-display-handler.git
+[submodule "stage9/14-iombian-bluetooth-configurator/iombian-bluetooth-configurator"]
+	path = stage9/14-iombian-bluetooth-configurator/iombian-bluetooth-configurator
+	url = https://github.com/Tknika/iombian-bluetooth-configurator.git
+[submodule "stage9/15-iombian-remote-configurator/iombian-remote-configurator"]
+	path = stage9/15-iombian-remote-configurator/iombian-remote-configurator
+	url = https://github.com/Tknika/iombian-remote-configurator.git

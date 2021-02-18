@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-INSTALLATION_PATH="/opt/iombian-status-display"
+PROJECT_NAME="iombian-display-handler"
+INSTALLATION_PATH="/opt/iombian-display-handler"
 
 # Enable I2C and SPI
 on_chroot << EOF
@@ -20,9 +21,9 @@ fi
 mkdir -p $INSTALLATION_PATH
 EOF
 
-install -m 644 -g root -o root iombian-status-display/requirements.txt ${ROOTFS_DIR}$INSTALLATION_PATH
-install -m 644 -g root -o root iombian-status-display/systemd/iombian-status-display.service ${ROOTFS_DIR}/etc/systemd/system
-cp -r iombian-status-display/src/* ${ROOTFS_DIR}$INSTALLATION_PATH
+install -m 644 -g root -o root ${PROJECT_NAME}/requirements.txt ${ROOTFS_DIR}$INSTALLATION_PATH
+install -m 644 -g root -o root ${PROJECT_NAME}/systemd/${PROJECT_NAME}.service ${ROOTFS_DIR}/etc/systemd/system
+cp -r ${PROJECT_NAME}/src/* ${ROOTFS_DIR}$INSTALLATION_PATH
 
 # Create the virtual environment
 on_chroot << EOF
@@ -33,4 +34,6 @@ python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
+
+systemctl enable ${PROJECT_NAME}
 EOF

@@ -1,0 +1,4 @@
+python3-venv
+python3-dev
+libbluetooth-dev
+libudev-dev

@@ -12,7 +12,7 @@ The initial configuration of the operating system has been simplified to the max
 
 ## Installation
 
-The installation of the distribution is done in the same way as with any version of Raspbian.
+The installation of the distribution is done in the same way as with any version of Raspberry Pi OS.
 These are the recommended steps to follow:
 
 - Download Etcher from its [website](https://www.balena.io/etcher/).
@@ -21,15 +21,23 @@ These are the recommended steps to follow:
 - Run Etcher, choose the IoMBian .zip file in "Select image", check that the selected microSD card is the right one and press the "Flash" button.
 Wait a few minutes (< 5 minutes) until the process is over.
 ![Etcher - Flash](docs/etcher-flash.png)
-- Remove the microSD card and reinsert it into the computer's card reader.
-- In the file browser, open the "boot" partition, enter the "config" folder, open the "parameters.yml" file with any text editor (in Windows, it is recommended to use [Notepad++](https://notepad-plus-plus.org/)) and edit the following parameters (more about this in [iombian-confinit](https://github.com/Tknika/iombian-confinit)):
-  - system/hostname: ~~iombian~~ &rarr; iombian-aiturrioz
-  - user/password: ~~iompi~~ &rarr; *your_password*
-  - networking/wlan0/ssid: *wifi_network_name*
-  - networking/wlan0/psk: *wifi_network_password*
-- Remove the microSD card from the computer and insert it into the Raspberry Pi.
-- Power up the Raspberry Pi with a suitable power supply (5V and 2.5A).
-- Wait 5 minutes and... that's all! :tada:
+- After that, you have two options:
+  - [**Recommended**] IoMBian Configurator
+    - Remove the microSD card from the computer and insert it into the Raspberry Pi.
+    - Power up the Raspberry Pi with a suitable power supply (5V and 2.5A) and wait 2 minutes (or until a QR code is displayed on the small screen).
+    - Scan the QR code or go to [IoMBian Configurator](https://iombian-configurator.web.app/) [using Chrome], create an account, add a new device and configure it according to your needs.
+    - Press the "Sync" (bluetooth) button, choose your IoMBian device and... that's all! :tada: The device will reboot and will be ready in a minute.
+  - Manual
+    - Remove the microSD card and reinsert it into the computer's card reader.
+    - In the file browser, open the "boot" partition, enter the "config" folder, open the "parameters.yml" file with any text editor (in Windows, it is recommended to use [Notepad++](https://notepad-plus-plus.org/)) and edit the following parameters (more about this in [iombian-confinit](https://github.com/Tknika/iombian-confinit)):
+      - system/hostname: ~~iombian~~ &rarr; iombian-aiturrioz
+      - user/password: ~~iompi~~ &rarr; *your_password*
+      - networking/wlan0/ssid: *wifi_network_name*
+      - networking/wlan0/psk: *wifi_network_password*
+      - config_date: *today's date*
+    - Remove the microSD card from the computer and insert it into the Raspberry Pi.
+    - Power up the Raspberry Pi with a suitable power supply (5V and 2.5A).
+    - Wait 5 minutes and... that's all! :tada:
 
 > **Note**: To discover the services installed on the Raspberry Pi, see the section [IoMBian Discover](#iombian-discover).
 
@@ -38,15 +46,15 @@ Wait a few minutes (< 5 minutes) until the process is over.
 
 ## Software
 
-IoMBian is based on the latest stable version of [Raspbian Lite](https://www.raspberrypi.org/downloads/raspbian/), to which the following programs have been added:
+IoMBian is based on the latest stable version of [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/), to which the following programs have been added:
 
 - [Node-RED](https://nodered.org/): a visual development tool, originally created by IBM, that allows to collect information from hardware devices, APIs and online services as part of the Internet of Things.
 - [Mosquitto](https://mosquitto.org/): a widespread MQTT server (broker) developed by the Eclipse Foundation.
 - [MQTT Web Client](https://github.com/hivemq/hivemq-mqtt-web-client): MQTT web client thanks to which the user (student) can send his first MQTT messages without having to install anything in his computer. Combined with the pre-installed mosquitto broker, it allows to start playing with the protocol in a few minutes.
 - [Monit](https://mmonit.com/monit/): program that can monitor the state of the system and is capable of sending notifications to the user (by e-mail) when something does not work as expected.
 - Led controller: configuration that allows to know if the Raspberry Pi is on or not through a LED connected to the GPIO14.
-- [Shutdown controller](https://github.com/Tknika/iom2040-shutdown-controller): small script developed in Python that enables the Raspberry Pi to be switched on and off manually from a button connected to the GPIO3.
 - [Samba](https://www.samba.org/cifs/docs/what-is-smb.html): protocol that simplifies file exchange between the Raspberry Pi and any computer on the local network. By default only the "/data" folder is shared (the folder name is case sensitive).
+- Different IoMBian Services: [iombian-config-file-handler](https://github.com/Tknika/iombian-config-file-handler), [iombian-shutdown-handler](https://github.com/Tknika/iombian-shutdown-handler), [iombian-button-handler](https://github.com/Tknika/iombian-button-handler), [iombian-system-info-provider](https://github.com/Tknika/iombian-system-info-provider), [iombian-display-handler](https://github.com/Tknika/iombian-display-handler), [iombian-bluetooth-configurator](https://github.com/Tknika/iombian-bluetooth-configurator), [iombian-remote-configurator](https://github.com/Tknika/iombian-remote-configurator).
 - [Confinit](https://github.com/jriguera/confinit): tool developed by José Riguera (@jriguera) that allows to configure the Raspberry Pi from a single text file hosted in the "boot" partition of the microSD card. A specific configuration has been created for IoMBian called [iombian-confinit](https://github.com/Tknika/iombian-confinit) that facilitates the configuration of the following services:
   - 'iompi' user's password (username cannot be changed)
   - Hostname
@@ -70,7 +78,7 @@ For more information about the installation and configuration process of the pro
 ## Development
 
 While the operating system can be manually generated on any computer (it is based on the [pi-gen](https://github.com/RPi-Distro/pi-gen#config) project), this GitHub repository is set up to compile the image automatically through GitHub Actions.
-To do this, you just need to create a new 'Release' (using the "Draft a new release" button, as the repository administrator) and in less than 30 minutes the 'Release' will be updated with the corresponding .zip file.
+To do this, you just need to create a new 'Release' (using the "Draft a new release" button, as the repository administrator) and in less than 60 minutes the 'Release' will be updated with the corresponding .zip file.
 
 However, if you still want to compile the distribution locally, you can take the following steps (not recommended):
 
@@ -93,7 +101,7 @@ After 30-60 minutes, the .img file will be available in the 'deploy' folder.
 
 ## Author
 
-(c) 2020 [Tknika](https://tknika.eus/) ([Aitor Iturrioz](https://github.com/bodiroga))
+(c) 2021 [Tknika](https://tknika.eus/) ([Aitor Iturrioz](https://github.com/bodiroga))
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
