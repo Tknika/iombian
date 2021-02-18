@@ -6,7 +6,13 @@ git submodule update
 
 echo "Pulling latest changes ..."
 git -C pi-gen pull origin master
+git -C stage9/02-iombian-config-file-handler/iombian-config-file-handler pull origin master
+git -C stage9/10-iombian-shutdown-handler/iombian-shutdown-handler pull origin master
+git -C stage9/11-iombian-button-handler/iombian-button-handler pull origin master
+git -C stage9/12-iombian-system-info-provider/iombian-system-info-provider pull origin master
+git -C stage9/13-iombian-display-handler/iombian-display-handler pull origin master
+git -C stage9/14-iombian-bluetooth-configurator/iombian-bluetooth-configurator pull origin master
+git -C stage9/15-iombian-remote-configurator/iombian-remote-configurator pull origin master
 git -C stage9/99-confinit/config pull origin master
-git -C stage9/10-iombian-status-display/iombian-status-display pull origin master
 
 echo "Done."

@@ -1,6 +1,9 @@
 [submodule "pi-gen"]
 	path = pi-gen
 	url = https://github.com/RPi-Distro/pi-gen.git
+[submodule "stage9/99-confinit/config"]
+	path = stage9/99-confinit/config
+	url = https://github.com/Tknika/iombian-confinit.git
 [submodule "stage9/02-iombian-config-file-handler/iombian-config-file-handler"]
 	path = stage9/02-iombian-config-file-handler/iombian-config-file-handler
 	url = https://github.com/Tknika/iombian-config-file-handler.git
@@ -22,6 +25,3 @@
 [submodule "stage9/15-iombian-remote-configurator/iombian-remote-configurator"]
 	path = stage9/15-iombian-remote-configurator/iombian-remote-configurator
 	url = https://github.com/Tknika/iombian-remote-configurator.git
-[submodule "stage9/99-confinit/config"]
-	path = stage9/99-confinit/config
-	url = https://github.com/Tknika/iombian-confinit.git
