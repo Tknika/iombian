@@ -25,3 +25,6 @@
 [submodule "stage9/15-iombian-remote-configurator/iombian-remote-configurator"]
 	path = stage9/15-iombian-remote-configurator/iombian-remote-configurator
 	url = https://github.com/Tknika/iombian-remote-configurator.git
+[submodule "stage9/16-iombian-serial-configurator/iombian-serial-configurator"]
+	path = stage9/16-iombian-serial-configurator/iombian-serial-configurator
+	url = https://github.com/Tknika/iombian-serial-configurator.git
