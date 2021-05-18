@@ -5,7 +5,7 @@ NODERED_GROUP=$FIRST_USER_NAME
 NODERED_HOME=$( getent passwd "$NODERED_USER" | cut -d: -f6 )
 
 # install node-red package
-npm i -g --unsafe-perm --no-progress node-red@1.3.3
+npm i -g --unsafe-perm --no-progress node-red@1.3.5
 
 # set local folder
 mkdir -p "$NODERED_HOME/.node-red/node_modules"
