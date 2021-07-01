@@ -21,12 +21,17 @@ These are the recommended steps to follow:
 - Run Etcher, choose the IoMBian .zip file in "Select image", check that the selected microSD card is the right one and press the "Flash" button.
 Wait a few minutes (< 5 minutes) until the process is over.
 ![Etcher - Flash](docs/etcher-flash.png)
-- After that, you have two options:
-  - [**Recommended**] IoMBian Configurator
+- After that, you have different configuration options:
+  - [**Recommended**] IoMBian Configurator - Bluetooth
     - Remove the microSD card from the computer and insert it into the Raspberry Pi.
     - Power up the Raspberry Pi with a suitable power supply (5V and 2.5A) and wait 2 minutes (or until a QR code is displayed on the small screen).
     - Scan the QR code or go to [IoMBian Configurator](https://iombian-configurator.web.app/) [using Chrome], create an account, add a new device and configure it according to your needs.
     - Press the "Sync" (bluetooth) button, choose your IoMBian device and... that's all! :tada: The device will reboot and will be ready in a minute.
+  - [**Recommended**] IoMBian Configurator - USB-C
+    - Remove the microSD card from the computer and insert it into the Raspberry Pi.
+    - Connect the Raspberry Pi to your PC using a USB-C cable and wait 2 minutes (or until a QR code is displayed on the small screen).
+    - Scan the QR code or go to [IoMBian Configurator](https://iombian-configurator.web.app/) [using Chrome], create an account, add a new device and configure it according to your needs.
+    - Press the "Sync" (USB) button, choose your IoMBian device and... that's all! :tada: The device will reboot and will be ready in a minute.
   - Manual
     - Remove the microSD card and reinsert it into the computer's card reader.
     - In the file browser, open the "boot" partition, enter the "config" folder, open the "parameters.yml" file with any text editor (in Windows, it is recommended to use [Notepad++](https://notepad-plus-plus.org/)) and edit the following parameters (more about this in [iombian-confinit](https://github.com/Tknika/iombian-confinit)):
@@ -34,7 +39,7 @@ Wait a few minutes (< 5 minutes) until the process is over.
       - user/password: ~~iompi~~ &rarr; *your_password*
       - networking/wlan0/ssid: *wifi_network_name*
       - networking/wlan0/psk: *wifi_network_password*
-      - config_date: *today's date*
+      - config_date: *today's date* (Using the YYYY-MM-DDTHH:MM:SS format. For example: 2021-06-09T11:23:34)
     - Remove the microSD card from the computer and insert it into the Raspberry Pi.
     - Power up the Raspberry Pi with a suitable power supply (5V and 2.5A).
     - Wait 5 minutes and... that's all! :tada:
