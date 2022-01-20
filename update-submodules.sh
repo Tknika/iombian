@@ -1,10 +1,6 @@
 #!/bin/bash -e
 
-echo "Checking git submodules ..."
-git submodule init
-git submodule update
-
-echo "Pulling latest changes ..."
+echo "Pulling latest submodule changes ..."
 git -C pi-gen pull origin master
 git -C stage9/02-iombian-config-file-handler/iombian-config-file-handler pull origin master
 git -C stage9/10-iombian-shutdown-handler/iombian-shutdown-handler pull origin master

@@ -32,7 +32,7 @@ chown -R $FIRST_USER_NAME:$FIRST_USER_NAME $INSTALLATION_PATH
 cd $INSTALLATION_PATH
 python3 -m venv venv
 source venv/bin/activate
-pip install --upgrade pip
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 
 systemctl enable ${PROJECT_NAME}
