@@ -1,0 +1,17 @@
+[Unit]
+Description=WeTTY
+After=network-online.target
+
+[Service]
+Type=simple
+User=iompi
+Restart=always
+RestartSec=2
+TimeoutStopSec=5
+SyslogIdentifier=wetty
+
+WorkingDirectory=/opt/wetty
+ExecStart=/opt/wetty/bin/wetty --host 0.0.0.0 -p 3000 --title Wetty --base /
+
+[Install]
+WantedBy=default.target
