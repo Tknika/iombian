@@ -31,3 +31,6 @@
 [submodule "stage9/19-iombian-tunnels-handler/iombian-tunnels-handler"]
 	path = stage9/19-iombian-tunnels-handler/iombian-tunnels-handler
 	url = https://github.com/Tknika/iombian-tunnels-handler.git
+[submodule "stage9/20-iombian-services-uploader/iombian-services-uploader"]
+	path = stage9/20-iombian-services-uploader/iombian-services-uploader
+	url = https://github.com/Tknika/iombian-services-uploader.git
