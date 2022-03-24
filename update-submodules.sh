@@ -12,6 +12,7 @@ git -C stage9/15-iombian-remote-configurator/iombian-remote-configurator pull or
 git -c stage9/16-iombian-serial-configurator/iombian-serial-configurator pull origin master
 git -c stage9/19-iombian-tunnels-handler/iombian-tunnels-handler pull origin master
 git -C stage9/20-iombian-services-uploader/iombian-services-uploader pull origin master
+git -C stage9/21-iombian-system-info-uploader/iombian-system-info-uploader pull origin master
 git -C stage9/99-confinit/config pull origin master
 
 echo "Done."
