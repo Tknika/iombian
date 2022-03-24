@@ -28,3 +28,6 @@
 [submodule "stage9/16-iombian-serial-configurator/iombian-serial-configurator"]
 	path = stage9/16-iombian-serial-configurator/iombian-serial-configurator
 	url = https://github.com/Tknika/iombian-serial-configurator.git
+[submodule "stage9/20-iombian-services-uploader/iombian-services-uploader"]
+	path = stage9/20-iombian-services-uploader/iombian-services-uploader
+	url = https://github.com/Tknika/iombian-services-uploader.git
