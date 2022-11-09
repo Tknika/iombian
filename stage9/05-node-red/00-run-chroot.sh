@@ -1,11 +1,13 @@
 #!/bin/bash -e
 
+NODERED_VERSION=3.0.2
+
 NODERED_USER=$FIRST_USER_NAME
 NODERED_GROUP=$FIRST_USER_NAME
 NODERED_HOME=$( getent passwd "$NODERED_USER" | cut -d: -f6 )
 
 # install node-red package
-npm i -g --unsafe-perm --no-progress node-red@2.2.2
+npm i -g --unsafe-perm --no-progress node-red@$NODERED_VERSION
 
 # set local folder
 mkdir -p "$NODERED_HOME/.node-red/node_modules"
