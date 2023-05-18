@@ -18,3 +18,6 @@ User=root
 Group=root
 ExecStart=/bin/confinit --config /%I/.confinit-final.yml
 PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
