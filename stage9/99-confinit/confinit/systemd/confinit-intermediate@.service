@@ -1,13 +1,13 @@
 [Unit]
-Description=Confinit final files from /%I
+Description=Confinit intermediate files from /%I
 DefaultDependencies=no
 After=local-fs.target
 Before=shutdown.target
-Wants=confinit-intermediate@%i.service
-After=confinit-intermediate@%i.service
+Wants=confinit-boot@%i.service
+After=confinit-boot@%i.service
 Conflicts=shutdown.target
 ConditionFileIsExecutable=/bin/confinit
-ConditionPathExists=/%I/.confinit-final.yml
+ConditionPathExists=/%I/.confinit-intermediate.yml
 # RequiresMountsFor=/boot
 
 [Service]
@@ -16,5 +16,5 @@ RemainAfterExit=yes
 StandardOutput=journal
 User=root
 Group=root
-ExecStart=/bin/confinit --config /%I/.confinit-final.yml
+ExecStart=/bin/confinit --config /%I/.confinit-intermediate.yml
 PrivateTmp=yes
