@@ -3,9 +3,8 @@ Description=Confinit final files from /%I
 DefaultDependencies=no
 After=local-fs.target
 Before=shutdown.target
-Wants=network.target multi-user.target docker.service cloud-init.target
-After=network.target multi-user.target docker.service cloud-init.target
-Before=docker-compose.target
+Wants=confinit-intermediate@%i.service
+After=confinit-intermediate@%i.service
 Conflicts=shutdown.target
 ConditionFileIsExecutable=/bin/confinit
 ConditionPathExists=/%I/.confinit-final.yml
@@ -21,4 +20,4 @@ ExecStart=/bin/confinit --config /%I/.confinit-final.yml
 PrivateTmp=yes
 
 [Install]
-WantedBy=multi-user.target docker-compose.target
+WantedBy=multi-user.target
