@@ -1,13 +1,13 @@
 [Unit]
-Description=Confinit boot files from /%I
+Description=Confinit intermediate files from /%I
 DefaultDependencies=no
-Requires=local-fs.target
 After=local-fs.target
 Before=shutdown.target
-Before=systemd-sysctl.service systemd-modules-load.service systemd-timesyncd.service
+Wants=confinit-boot@%i.service
+After=confinit-boot@%i.service
 Conflicts=shutdown.target
 ConditionFileIsExecutable=/bin/confinit
-ConditionPathExists=/%I/.confinit-boot.yml
+ConditionPathExists=/%I/.confinit-intermediate.yml
 # RequiresMountsFor=/boot
 
 [Service]
@@ -16,8 +16,8 @@ RemainAfterExit=yes
 StandardOutput=journal
 User=root
 Group=root
-ExecStart=/bin/confinit --config /%I/.confinit-boot.yml
+ExecStart=/bin/confinit --config /%I/.confinit-intermediate.yml
 PrivateTmp=yes
 
 [Install]
-WantedBy=sysinit.target
+WantedBy=multi-user.target
