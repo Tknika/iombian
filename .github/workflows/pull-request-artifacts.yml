@@ -1,0 +1,31 @@
+name: Generate attachments
+
+on:
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    permissions:
+      contents: write
+      pull-requests: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Build IoMBian
+        run:
+          ./build-iombian.sh
+      - name: Pull request artifacts
+        uses: gavv/pull-request-artifacts@v1.0.0
+        with:
+          # Commit hash that triggered PR
+          commit: ${{ github.event.pull_request.head.sha }}
+          # Token for current repo (used to post PR comment)
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          # Upload artifacts to specific branch
+          artifacts-branch: artifacts
+          # Whitespace-separated list of files to upload
+          artifacts: |
+            deploy/*.zip
