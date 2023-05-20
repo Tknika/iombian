@@ -13,10 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build IoMBian
         run:
           ./build-iombian.sh
+      - name: Change image name
+        run: 
+          mv deploy/*.zip deploy/iombian-${{ github.sha }}.zip 
       - name: Pull request artifacts
         uses: gavv/pull-request-artifacts@v1.0.0
         with:
@@ -28,4 +31,4 @@ jobs:
           artifacts-branch: artifacts
           # Whitespace-separated list of files to upload
           artifacts: |
-            deploy/*.zip
+            deploy/iombian-${{ github.sha }}.zip
