@@ -15,9 +15,9 @@ jobs:
           ./build-iombian.sh
       - name: Change image name
         run: 
-          mv deploy/*.zip deploy/iombian-${{ github.sha }}.zip 
+          mv deploy/*.zip iombian-${{ github.sha }}.zip 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: deploy/iombian-${{ github.sha }}.zip
-          path: deploy/iombian-${{ github.sha }}.zip
+          name: iombian-${{ github.sha }}.zip
+          path: iombian-${{ github.sha }}.zip
