@@ -12,13 +12,15 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Build IoMBian
         run:
           ./build-iombian.sh
+      - name: Rename file name with tag name
+        run: mv deploy/*.zip iombian-${{ github.ref_name }}.zip
       - name: Publish the artifacts
         uses: skx/github-action-publish-binaries@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: 'deploy/*.zip'
+          args: 'iombian-${{ github.ref_name }}.zip'
