@@ -1,0 +1,23 @@
+name: PR Artifact Upload
+
+on:
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Build IoMBian
+        run:
+          ./build-iombian.sh
+      - name: Rename zip file name
+        run: mv deploy/*.zip iombian-${{ github.sha }}.zip 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: iombian-${{ github.sha }}.zip
+          path: iombian-${{ github.sha }}.zip
+          retention-days: 7
