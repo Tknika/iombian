@@ -1,4 +1,4 @@
-name: Generate attachments
+name: PR Artifact Upload
 
 on:
   pull_request:
@@ -13,11 +13,11 @@ jobs:
       - name: Build IoMBian
         run:
           ./build-iombian.sh
-      - name: Change image name
-        run: 
-          mv deploy/*.zip iombian-${{ github.sha }}.zip 
+      - name: Rename zip file name
+        run: mv deploy/*.zip iombian-${{ github.sha }}.zip 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: iombian-${{ github.sha }}.zip
           path: iombian-${{ github.sha }}.zip
+          retention-days: 7
