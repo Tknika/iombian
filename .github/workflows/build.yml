@@ -1,16 +1,27 @@
 name: IoMBian builder
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-    build:
-      strategy:
-        matrix:
-          platform: [ubuntu-20.04]
-      runs-on: ${{ matrix.platform }}
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v2
-        - name: Build IoMBian
-          run:
-            ./build-iombian.sh
+  build:
+    strategy:
+      matrix:
+        platform: [ubuntu-20.04]
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Build IoMBian
+        run:
+          ./build-iombian.sh
+      - name: Rename zip file name
+        run: mv deploy/*.zip iombian-${{ github.sha }}.zip 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: iombian-${{ github.sha }}.zip
+          path: iombian-${{ github.sha }}.zip
+          retention-days: 14
