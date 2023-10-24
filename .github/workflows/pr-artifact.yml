@@ -6,10 +6,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Install qemu-user-static
+        run: sudo apt update && sudo apt install -y qemu-user-static
       - name: Build IoMBian
         run:
           ./build-iombian.sh

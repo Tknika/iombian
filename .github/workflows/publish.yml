@@ -6,13 +6,12 @@ on:
 
 jobs:
   publish:
-    strategy:
-      matrix:
-        platform: [ubuntu-20.04]
-    runs-on: ${{ matrix.platform }}
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Install qemu-user-static
+        run: sudo apt update && sudo apt install -y qemu-user-static
       - name: Build IoMBian
         run:
           ./build-iombian.sh
