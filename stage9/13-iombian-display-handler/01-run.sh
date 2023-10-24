@@ -27,13 +27,13 @@ cp -r ${PROJECT_NAME}/src/* ${ROOTFS_DIR}$INSTALLATION_PATH
 
 # Create the virtual environment
 on_chroot << EOF
-chown -R $FIRST_USER_NAME:$FIRST_USER_NAME $INSTALLATION_PATH
-
 cd $INSTALLATION_PATH
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
+
+chown -R $FIRST_USER_NAME:$FIRST_USER_NAME $INSTALLATION_PATH
 
 systemctl enable ${PROJECT_NAME}
 EOF
