@@ -14,4 +14,4 @@ wget https://raw.githubusercontent.com/Tknika/iombian-services-marketplace/main/
 chown -R ${FIRST_USER_NAME}:${FIRST_USER_NAME} ${SERVICES_FOLDER_PATH}/${SERVICE_NAME}
 
 # Pull docker image
-docker compose pull -f ${SERVICES_FOLDER_PATH}/${SERVICE_NAME}/docker-compose.yaml
+docker compose -f ${SERVICES_FOLDER_PATH}/${SERVICE_NAME}/docker-compose.yaml pull
