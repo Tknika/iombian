@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 PROJECT_NAME="iombian-serial-configurator"
-INSTALLATION_PATH="/opt/iombian-serial-configurator"
+INSTALLATION_PATH="/opt/${PROJECT_NAME}"
 
 # Enable DWC2 dtoverlay
 on_chroot << EOF

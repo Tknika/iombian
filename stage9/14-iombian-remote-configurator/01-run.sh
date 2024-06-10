@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 PROJECT_NAME="iombian-remote-configurator"
-INSTALLATION_PATH="/opt/iombian-remote-configurator"
+INSTALLATION_PATH="/opt/${PROJECT_NAME}"
 
 # Create the installation folder
 on_chroot << EOF

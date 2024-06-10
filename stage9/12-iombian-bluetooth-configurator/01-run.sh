@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 PROJECT_NAME="iombian-bluetooth-configurator"
-INSTALLATION_PATH="/opt/iombian-bluetooth-configurator"
+INSTALLATION_PATH="/opt/${PROJECT_NAME}"
 
 # Create the installation folder
 on_chroot << EOF
