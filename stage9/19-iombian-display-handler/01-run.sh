@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 PROJECT_NAME="iombian-display-handler"
-INSTALLATION_PATH="/opt/iombian-display-handler"
+INSTALLATION_PATH="/opt/${PROJECT_NAME}"
 
 # Enable I2C and SPI
 on_chroot << EOF
