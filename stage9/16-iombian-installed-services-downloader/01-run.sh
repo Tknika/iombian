@@ -18,8 +18,8 @@ cp -r ${PROJECT_NAME}/src/* ${ROOTFS_DIR}$INSTALLATION_PATH
 # Create the virtual environment
 on_chroot << EOF
 cd $INSTALLATION_PATH
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 
