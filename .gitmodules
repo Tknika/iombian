@@ -28,3 +28,6 @@
 [submodule "stage9/19-iombian-display-handler/iombian-display-handler"]
 	path = stage9/19-iombian-display-handler/iombian-display-handler
 	url = https://github.com/Tknika/iombian-display-handler.git
+[submodule "stage9/10-iombian-shutdown-service/iombian-shutdown-service"]
+	path = stage9/10-iombian-shutdown-service/iombian-shutdown-service
+	url = https://github.com/Tknika/iombian-shutdown-service.git
