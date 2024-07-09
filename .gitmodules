@@ -4,36 +4,30 @@
 [submodule "stage9/99-confinit/config"]
 	path = stage9/99-confinit/config
 	url = https://github.com/Tknika/iombian-confinit.git
-[submodule "stage9/02-iombian-config-file-handler/iombian-config-file-handler"]
-	path = stage9/02-iombian-config-file-handler/iombian-config-file-handler
+[submodule "stage9/11-iombian-config-file-handler/iombian-config-file-handler"]
+	path = stage9/11-iombian-config-file-handler/iombian-config-file-handler
 	url = https://github.com/Tknika/iombian-config-file-handler.git
-[submodule "stage9/10-iombian-shutdown-handler/iombian-shutdown-handler"]
-	path = stage9/10-iombian-shutdown-handler/iombian-shutdown-handler
-	url = https://github.com/Tknika/iombian-shutdown-handler.git
-[submodule "stage9/11-iombian-button-handler/iombian-button-handler"]
-	path = stage9/11-iombian-button-handler/iombian-button-handler
-	url = https://github.com/Tknika/iombian-button-handler.git
-[submodule "stage9/12-iombian-system-info-provider/iombian-system-info-provider"]
-	path = stage9/12-iombian-system-info-provider/iombian-system-info-provider
-	url = https://github.com/Tknika/iombian-system-info-provider.git
-[submodule "stage9/13-iombian-display-handler/iombian-display-handler"]
-	path = stage9/13-iombian-display-handler/iombian-display-handler
-	url = https://github.com/Tknika/iombian-display-handler.git
-[submodule "stage9/14-iombian-bluetooth-configurator/iombian-bluetooth-configurator"]
-	path = stage9/14-iombian-bluetooth-configurator/iombian-bluetooth-configurator
+[submodule "stage9/12-iombian-bluetooth-configurator/iombian-bluetooth-configurator"]
+	path = stage9/12-iombian-bluetooth-configurator/iombian-bluetooth-configurator
 	url = https://github.com/Tknika/iombian-bluetooth-configurator.git
-[submodule "stage9/15-iombian-remote-configurator/iombian-remote-configurator"]
-	path = stage9/15-iombian-remote-configurator/iombian-remote-configurator
-	url = https://github.com/Tknika/iombian-remote-configurator.git
-[submodule "stage9/16-iombian-serial-configurator/iombian-serial-configurator"]
-	path = stage9/16-iombian-serial-configurator/iombian-serial-configurator
+[submodule "stage9/13-iombian-serial-configurator/iombian-serial-configurator"]
+	path = stage9/13-iombian-serial-configurator/iombian-serial-configurator
 	url = https://github.com/Tknika/iombian-serial-configurator.git
-[submodule "stage9/19-iombian-tunnels-handler/iombian-tunnels-handler"]
-	path = stage9/19-iombian-tunnels-handler/iombian-tunnels-handler
-	url = https://github.com/Tknika/iombian-tunnels-handler.git
-[submodule "stage9/20-iombian-services-uploader/iombian-services-uploader"]
-	path = stage9/20-iombian-services-uploader/iombian-services-uploader
-	url = https://github.com/Tknika/iombian-services-uploader.git
-[submodule "stage9/21-iombian-system-info-uploader/iombian-system-info-uploader"]
-	path = stage9/21-iombian-system-info-uploader/iombian-system-info-uploader
-	url = https://github.com/Tknika/iombian-system-info-uploader.git
+[submodule "stage9/14-iombian-remote-configurator/iombian-remote-configurator"]
+	path = stage9/14-iombian-remote-configurator/iombian-remote-configurator
+	url = https://github.com/Tknika/iombian-remote-configurator.git
+[submodule "stage9/16-iombian-installed-services-downloader/iombian-installed-services-downloader"]
+	path = stage9/16-iombian-installed-services-downloader/iombian-installed-services-downloader
+	url = https://github.com/Tknika/iombian-installed-services-downloader.git
+[submodule "stage9/15-iombian-installed-services-handler/iombian-installed-services-handler"]
+	path = stage9/15-iombian-installed-services-handler/iombian-installed-services-handler
+	url = https://github.com/Tknika/iombian-installed-services-handler.git
+[submodule "stage9/17-iombian-updatable-services-handler/iombian-updatable-services-handler"]
+	path = stage9/17-iombian-updatable-services-handler/iombian-updatable-services-handler
+	url = https://github.com/Tknika/iombian-updatable-services-handler.git
+[submodule "stage9/19-iombian-display-handler/iombian-display-handler"]
+	path = stage9/19-iombian-display-handler/iombian-display-handler
+	url = https://github.com/Tknika/iombian-display-handler.git
+[submodule "stage9/10-iombian-shutdown-service/iombian-shutdown-service"]
+	path = stage9/10-iombian-shutdown-service/iombian-shutdown-service
+	url = https://github.com/Tknika/iombian-shutdown-service.git
